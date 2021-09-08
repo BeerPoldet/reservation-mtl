@@ -1,0 +1,86 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: eb61fb6a88f95792323643559487173a5fc41989f3241c61f3f30b5b3c9a1bec
+
+name:           reservation-mtl
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/reservation-mtl#readme>
+homepage:       https://github.com/githubuser/reservation-mtl#readme
+bug-reports:    https://github.com/githubuser/reservation-mtl/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/reservation-mtl
+
+library
+  exposed-modules:
+      ApiModel
+      App
+      DB
+      Lib
+  other-modules:
+      Paths_reservation_mtl
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , either
+    , filepath
+    , mtl
+    , time
+    , transformers
+  default-language: Haskell2010
+
+executable reservation-mtl-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_reservation_mtl
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , either
+    , filepath
+    , mtl
+    , reservation-mtl
+    , time
+    , transformers
+  default-language: Haskell2010
+
+test-suite reservation-mtl-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_reservation_mtl
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , either
+    , filepath
+    , mtl
+    , reservation-mtl
+    , time
+    , transformers
+  default-language: Haskell2010
